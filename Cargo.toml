@@ -1,0 +1,19 @@
+[package]
+name = "life-wasm"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["wee_alloc"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+console_error_panic_hook = { version = "0.1.7", optional = true }
+fixedbitset = "0.4.2"
+wasm-bindgen = "0.2.86"
+web-sys = { version = "0.3.63", features = ["console"] }
+wee_alloc = { version = "0.4.5", optional = true }
